@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.center {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#slide {
+  overflow: hidden;
+}
+
+.item {
+  display: none;
+  width: 100%;
+  height: 400px;
+  animation: show 0.2s linear;
+}
+
+.item.active {
+  display: block;
+}
+
+.dots {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.dots .boll {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin: 0 3px;
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.dots .boll.active {
+  background-color: #7a7a7a;
+}
+
+@keyframes show {
+  from {
+    transform: translateX(30px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
